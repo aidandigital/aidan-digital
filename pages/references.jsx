@@ -10,7 +10,7 @@ function References() {
         <div className="text-center">
             <Section>
                 <Title>Trademark info for References</Title>
-                Throughout this website, I reference external software products and services. For example, in the section "Technologies that I use", I display certain logos of products/services that I have used to develop/publish at least one of my projects. <strong>I am not endorsed, sponsored by, or affiliated with any of the external software products/services that I may reference.</strong> If I have mistakenly referred to a product/service in a way that infringes on it's copyright or trademark policy, please fill out the following form immediately to have it swiftly altered or removed:
+                Throughout this website, other websites I own, and other means of marketing/communication/documentation, I reference external software products and services. For example, in the section "Technologies that I use" on this website, I display certain logos of products/services that I have used to develop/publish at least one of my projects. <strong>I am not endorsed, sponsored by, or affiliated with any of the external software products/services that I may reference.</strong> If I have mistakenly referred to a product/service in a way that infringes on it's copyright or trademark policy, please fill out the following form immediately to have it swiftly altered or removed:
                 <div className="mt-8">
                     <Button>
                         <Link href="/copyright-infringement">Report copyright infringement</Link>

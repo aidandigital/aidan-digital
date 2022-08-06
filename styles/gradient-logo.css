@@ -1,4 +1,4 @@
-/* Import AD Icon from CDN */
+/* Import AD Icon */
 @import url('https://cdn.aidandigital.com/ad-icon/css/fontello-embedded.css');
 
 /* Must be applied to ::before since that is how the font is applied to the <i> element by Fontello */
