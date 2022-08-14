@@ -19,7 +19,7 @@ export async function getTechnologies() {
   const db = await database; // wait till the database is ready from the function above
   const technologies = await db
     .collection("technologies")
-    .find({})
+    .find({unlisted: {$ne: true}})
     .toArray();
   return doubleJson(technologies);
 }
