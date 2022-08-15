@@ -1,7 +1,8 @@
 import clientPromise from "./clientPromise";
 import doubleJson from "../utils/doubleJson";
 
-const dbName = process.env.DB;
+// ENV VARS
+const dbName = process.env.DB_NAME;
 
 if (!dbName) {
   throw new Error("Please add your DB name to .env.local");
