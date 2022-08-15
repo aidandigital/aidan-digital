@@ -12,7 +12,7 @@ export default function Projects({ technologies, projects }) {
   function getMenuItems() {
     return technologies.map(technology => ({
       name: technology.alt,
-      href: `/projects?technology=${technology.path}`,
+      href: `/projects?tech=${technology.path}`,
     }));
   }
 
@@ -29,8 +29,8 @@ export default function Projects({ technologies, projects }) {
   useEffect(() => {
     // Set the selected technology once the router is ready and as long as something has changed:
     if (router.isReady && router.query.technology !== selectedTechnology) {
-      setSelectedTechnology(technologies.find(tech => tech.path === router.query.technology));
-      setFilteredProjects(projects.filter(project => checkProjectIsApplicable(project, router.query.technology)));
+      setSelectedTechnology(technologies.find(tech => tech.path === router.query.tech));
+      setFilteredProjects(projects.filter(project => checkProjectIsApplicable(project, router.query.tech)));
     }
   }, [router])
 
