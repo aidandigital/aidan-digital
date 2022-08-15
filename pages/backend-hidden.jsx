@@ -23,5 +23,4 @@ function BackendHidden() {
 
 BackendHidden.useAltLayout = true;
 BackendHidden.title = "Backend Code Hidden";
-
 export default BackendHidden;

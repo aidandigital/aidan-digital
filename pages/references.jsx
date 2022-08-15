@@ -60,5 +60,4 @@ function References() {
 
 References.useAltLayout = true;
 References.title = "Copyright Info for References";
-
 export default References;

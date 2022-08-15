@@ -7,8 +7,7 @@ import DefaultLayout from '../components/high-level/DefaultLayout'
 import AltLayout from '../components/high-level/AltLayout'
 
 function App({ Component, pageProps }) {
-  const useAltLayout = Component.useAltLayout;
-  const title = Component.title;
+  const { useAltLayout, title, description } = Component;
 
   if (useAltLayout) {
     return (
@@ -25,4 +24,4 @@ function App({ Component, pageProps }) {
   }
 }
 
-export default App
+export default App;

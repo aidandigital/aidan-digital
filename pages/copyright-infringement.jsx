@@ -87,5 +87,4 @@ function ReportCopyrightInfringementFunctional() {
 
 ReportCopyrightInfringementFunctional.useAltLayout = true;
 ReportCopyrightInfringementFunctional.title = "Report Copyright Infringement";
-
 export default ReportCopyrightInfringement;

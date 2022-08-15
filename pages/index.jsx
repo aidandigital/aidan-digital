@@ -8,7 +8,7 @@ import Feed from '../components/low-level/Feed'
 import externalImageLoader from '../utils/externalLogoLoader'
 import { getTechnologies, getProjects } from '../db/controllers.js'
 
-export default function Home({ technologies, projects }) {
+function Home({ technologies, projects }) {
   return (
     <>
       <div className="px-10 md:px-20 py-24 md:py-40">
@@ -36,6 +36,9 @@ export default function Home({ technologies, projects }) {
     </>
   );
 };
+
+Home.description = "I'm Aidan, a full stack website developer.";
+export default Home;
 
 export async function getStaticProps() {
   const technologies = await getTechnologies();

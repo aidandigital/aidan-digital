@@ -59,7 +59,7 @@ function Projects({ technologies, projects }) {
 };
 
 Projects.title = "Projects";
-
+Projects.description = "View my portfolio.";
 export default Projects;
 
 export async function getStaticProps() {

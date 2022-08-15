@@ -81,5 +81,5 @@ function ContactFunctional() {
 }
 
 ContactFunctional.title = "Contact";
-
+ContactFunctional.description = "Reach out to me.";
 export default ContactFunctional;

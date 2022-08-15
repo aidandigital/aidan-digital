@@ -7,6 +7,7 @@ function AltLayout({ children, title }) {
     <>
       <Head>
         <title>{title ? title + " |": ""} Aidan Digital</title>
+        {/* Don't index alt pages */}
         <meta name="robots" content="noindex" />
       </Head>
       <AltHeader />

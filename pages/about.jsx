@@ -33,7 +33,7 @@ function About({ pageData }) {
 }
 
 About.title = "About";
-
+About.description = "Learn about my programming journey and what I do.";
 export default About;
 
 export async function getStaticProps() {

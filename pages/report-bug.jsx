@@ -86,5 +86,4 @@ function ReportBugFunctional() {
 
 ReportBugFunctional.useAltLayout = true;
 ReportBugFunctional.title = "Report a Bug";
-
 export default ReportBugFunctional;
