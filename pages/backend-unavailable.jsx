@@ -1,9 +1,9 @@
-import Section from "../../components/high-level/Section";
-import Title from "../../components/low-level/Title";
-import Button from "../../components/low-level/Button";
-import LinkWithParams from "../../components/low-level/LinkWithParams";
+import Section from "../components/high-level/Section";
+import Title from "../components/low-level/Title";
+import Button from "../components/low-level/Button";
+import LinkWithParams from "../components/low-level/LinkWithParams";
 
-export default function BackendUnavailable() {
+function BackendUnavailable() {
   const bodyText = "I would like to request access to the backend of <app name>. I am a <title> and you can verify this by <example: visiting my linkedin profile>."
 
   return (
@@ -19,4 +19,8 @@ export default function BackendUnavailable() {
         </Section>
     </div>
   );
-}
+};
+
+BackendUnavailable.useAltLayout = true;
+
+export default BackendUnavailable;

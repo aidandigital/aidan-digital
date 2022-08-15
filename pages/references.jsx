@@ -1,9 +1,9 @@
-import Section from "../../components/high-level/Section";
-import Title from "../../components/low-level/Title";
-import Button from "../../components/low-level/Button";
+import Section from "../components/high-level/Section";
+import Title from "../components/low-level/Title";
+import Button from "../components/low-level/Button";
 import Link from "next/link";
-import LinkWithRef from "../../components/low-level/LinkWithRef";
-import UnderlineLink from "../../components/low-level/UnderlineLink";
+import LinkWithRef from "../components/low-level/LinkWithRef";
+import UnderlineLink from "../components/low-level/UnderlineLink";
 
 function References() {
     const year = new Date().getFullYear();

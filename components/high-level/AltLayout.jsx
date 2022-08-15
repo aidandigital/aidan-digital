@@ -1,11 +1,16 @@
 import AltHeader from './AltHeader';
 import AltFooter from './AltFooter';
+import Head from 'next/head';
 
 function AltLayout({ children }) {
   return (
     <>
+      <Head>
+        <title>Aidan Digital</title>
+        <meta name="robots" content="noindex" />
+      </Head>
       <AltHeader />
-        <main>{children}</main>
+      <main>{children}</main>
       <AltFooter />
     </>
   )
