@@ -1,8 +1,7 @@
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 
-const baseUrl = process.env.NEXT_PUBLIC_BASE_URL
-console.log(baseUrl)
+const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
 
 const LinkWithRef = ({ children, href }) => {
     const router = useRouter();

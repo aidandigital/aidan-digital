@@ -21,13 +21,20 @@ class Contact extends Component {
         };
     }
 
-    componentDidUpdate() {
+    fillStateFromQuery() {
         if (this.props.router.isReady && !this.state.stateFilledFromQuery) {
             for (let key in this.props.router.query) {
                 this.setState({ [key]: this.props.router.query[key] });
             }
             this.setState({ stateFilledFromQuery: true });
         }
+    }
+
+    componentDidUpdate() {
+        this.fillStateFromQuery();
+    }
+    componentDidMount() {
+        this.fillStateFromQuery();
     }
 
     setInput = (e) => {

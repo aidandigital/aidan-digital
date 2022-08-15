@@ -36,12 +36,14 @@ export default function Project({ project }) {
                                 Visit Website
                             </a>
                         </div>
-                        <Link href={project.githubUrl}>
-                            <div className="w-fit m-auto mb-5 hover:cursor-pointer hover:opacity-70 duration-200">
-                                <span className="mx-3 relative top-1"><Image loader={externalLogoLoader} src="github-2.svg" width="20" height="20" /></span>
-                                View on GitHub
-                            </div>
-                        </Link>
+                        {project.githubUrls.map((item, i) => (
+                            <Link href={item.url} key={i}>
+                                <div className="w-fit m-auto mb-5 hover:cursor-pointer hover:opacity-70 duration-200">
+                                    <span className="mx-3 relative top-1"><Image loader={externalLogoLoader} src="github-2.svg" width="20" height="20" /></span>
+                                    {item.name ? item.name : "GitHub Repo"}
+                                </div>
+                            </Link>
+                        ))}
                     </div>
                 </div>
             </Section>
@@ -83,7 +85,6 @@ export default function Project({ project }) {
 
 export async function getStaticProps(context) {
     const project = await getProject(context.params.projectPath);
-    console.log(project)
 
     return {
         props: { project: project },
