@@ -5,7 +5,7 @@ import UnderlineLink from "../low-level/UnderlineLink";
 export default function Footer() {
   const menuItems = [
     {name: "Report a Bug", href: "/report-bug", withRef: true, target: "_blank"},
-    {name: "Trademark info for References", href: "/references"},
+    {name: "Copyright info for References", href: "/references"},
   ];
 
   return (

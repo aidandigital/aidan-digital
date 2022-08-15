@@ -54,7 +54,7 @@ const Feed = ({ items }) => {
                         ))}
                     </div>
                 </>
-            : <div className="w-full text-center italic">No projects matched your query</div>}
+            : <div className="w-full text-center italic">No projects matched your query.</div>}
         </div>
     );
 };
