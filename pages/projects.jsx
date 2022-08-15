@@ -7,7 +7,7 @@ import Dropdown from '../components/low-level/Dropdown'
 import Link from 'next/link'
 import { getTechnologies, getProjects } from '../db/controllers.js'
 
-export default function Projects({ technologies, projects }) {
+function Projects({ technologies, projects }) {
   // Map technologies array into a form that can be accepted by Menu:
   function getMenuItems() {
     return technologies.map(technology => ({
@@ -44,7 +44,7 @@ export default function Projects({ technologies, projects }) {
 
   return (
     <>
-      <Section background="gray-200">
+      <Section background="gray-200" fullHeight={true}>
         <Title><span className="hover:cursor-pointer"><Link href="/projects">Projects</Link></span></Title>
         <div className="text-center pb-5">
           {!selectedTechnology ?
@@ -57,6 +57,10 @@ export default function Projects({ technologies, projects }) {
     </>
   );
 };
+
+Projects.title = "Projects";
+
+export default Projects;
 
 export async function getStaticProps() {
   const technologies = await getTechnologies();

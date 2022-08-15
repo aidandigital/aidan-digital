@@ -2,11 +2,11 @@ import Header from './Header';
 import Footer from './Footer';
 import Head from 'next/head';
 
-function DefaultLayout({ children }) {
+function DefaultLayout({ children, title }) {
   return (
     <>
       <Head>
-        <title>Aidan Digital</title>
+        <title>{title ? title + " |": ""} Aidan Digital</title>
         <meta name="robots" content="all" />
       </Head>
       <Header />

@@ -3,7 +3,7 @@ import Title from "../components/low-level/Title";
 import Button from "../components/low-level/Button";
 import LinkWithParams from "../components/low-level/LinkWithParams";
 
-function BackendUnavailable() {
+function BackendHidden() {
   const bodyText = "I would like to request access to the backend of <app name>. I am a <title> and you can verify this by <example: visiting my linkedin profile>."
 
   return (
@@ -21,6 +21,7 @@ function BackendUnavailable() {
   );
 };
 
-BackendUnavailable.useAltLayout = true;
+BackendHidden.useAltLayout = true;
+BackendHidden.title = "Backend Code Hidden";
 
-export default BackendUnavailable;
+export default BackendHidden;

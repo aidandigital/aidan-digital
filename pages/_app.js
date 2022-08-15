@@ -8,16 +8,17 @@ import AltLayout from '../components/high-level/AltLayout'
 
 function App({ Component, pageProps }) {
   const useAltLayout = Component.useAltLayout;
+  const title = Component.title;
 
   if (useAltLayout) {
     return (
-      <AltLayout>
+      <AltLayout title={title}>
         <Component {...pageProps} />
       </AltLayout>
     )
   } else {
     return (
-      <DefaultLayout>
+      <DefaultLayout title={title}>
         <Component {...pageProps} />
       </DefaultLayout>
     )

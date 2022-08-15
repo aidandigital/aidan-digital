@@ -26,5 +26,6 @@ function Success() {
 };
 
 Success.useAltLayout = true;
+Success.title = "Success";
 
 export default Success;

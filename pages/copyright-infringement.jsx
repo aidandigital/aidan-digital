@@ -8,7 +8,7 @@ import Submit from "../components/low-level/Submit";
 import Checkbox from "../components/low-level/Checkbox";
 import { useRouter } from "next/router";
 
-class ReportBug extends Component {
+class ReportCopyrightInfringement extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -77,14 +77,15 @@ class ReportBug extends Component {
     }
 };
 
-function ReportBugFunctional() {
+function ReportCopyrightInfringementFunctional() {
     const router = useRouter();
 
     return (
-        <ReportBug router={router} />
+        <ReportCopyrightInfringement router={router} />
     );
 }
 
-ReportBugFunctional.useAltLayout = true;
+ReportCopyrightInfringementFunctional.useAltLayout = true;
+ReportCopyrightInfringementFunctional.title = "Report Copyright Infringement";
 
-export default ReportBugFunctional;
+export default ReportCopyrightInfringement;

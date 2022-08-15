@@ -4,7 +4,7 @@ import SubTitle from "../components/low-level/SubTitle";
 import Answer from "../components/low-level/Answer";
 import { getPage } from "../db/controllers";
 
-export default function About({ pageData }) {
+function About({ pageData }) {
   return (
     <>
       <Section>
@@ -31,6 +31,10 @@ export default function About({ pageData }) {
     </>
   );
 }
+
+About.title = "About";
+
+export default About;
 
 export async function getStaticProps() {
   const pageData = await getPage("about");

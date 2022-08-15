@@ -2,11 +2,11 @@ import AltHeader from './AltHeader';
 import AltFooter from './AltFooter';
 import Head from 'next/head';
 
-function AltLayout({ children }) {
+function AltLayout({ children, title }) {
   return (
     <>
       <Head>
-        <title>Aidan Digital</title>
+        <title>{title ? title + " |": ""} Aidan Digital</title>
         <meta name="robots" content="noindex" />
       </Head>
       <AltHeader />

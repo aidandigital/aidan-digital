@@ -7,6 +7,7 @@ import Link from "next/link";
 import externalLogoLoader from "../../utils/externalLogoLoader";
 import externalThumbnailUrl from "../../utils/externalThumbnailUrl";
 import { getProject, getProjects } from "../../db/controllers";
+import Head from "next/head";
 
 export default function Project({ project }) {
     const WebIcon = () => (
@@ -17,6 +18,9 @@ export default function Project({ project }) {
 
     return (
         <>
+            <Head>
+                <title>{project.name} | Aidan Digital</title>
+            </Head>
             <Section background="gray-200">
                 <div className="md:flex items-center">
                     <div className="inline-block w-full md:w-1/2">
@@ -37,7 +41,7 @@ export default function Project({ project }) {
                             </a>
                         </div>
                         {project.githubUrls.map((item, i) => (
-                            <Link href={item.url} key={i}>
+                            <Link href={item.hidden ? "/backend-hidden" : item.url} key={i}>
                                 <div className="w-fit m-auto mb-5 hover:cursor-pointer hover:opacity-70 duration-200">
                                     <span className="mx-3 relative top-1"><Image loader={externalLogoLoader} src="github-2.svg" width="20" height="20" /></span>
                                     {item.name ? item.name : "GitHub Repo"}

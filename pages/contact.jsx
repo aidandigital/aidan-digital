@@ -5,7 +5,7 @@ import ParagraphInput from "../components/low-level/ParagraphInput";
 import Title from "../components/low-level/Title";
 import ArrowLink from "../components/low-level/ArrowLink";
 import Submit from "../components/low-level/Submit";
-import { withRouter } from "next/router";
+import { useRouter } from "next/router";
 
 class Contact extends Component {
     constructor(props) {
@@ -72,4 +72,14 @@ class Contact extends Component {
     }
 };
 
-export default withRouter(Contact);
+function ContactFunctional() {
+    const router = useRouter();
+
+    return (
+        <Contact router={router} />
+    );
+}
+
+ContactFunctional.title = "Contact";
+
+export default ContactFunctional;
