@@ -79,7 +79,7 @@ class InfiniteCarousel extends Component {
                             marginLeft: this.defaultMarginX, marginRight: this.defaultMarginX,
                         }}
                         >
-                            <Link href={"/projects?technology=" + image._id}>
+                            <Link href={"/projects?technology=" + image.path}>
                                 <Image loader={this.state.externalImageLoader} src={image.src} /* fix invalid src hostname error by using loader */ layout="responsive" width={this.computeTotalImageWidth(image)} style={{marginLeft: this.defaultMarginX, marginRight: this.defaultMarginX}} height={60 * 2} alt={image.alt} />
                             </Link>
                         </div>

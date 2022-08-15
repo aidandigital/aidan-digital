@@ -12,15 +12,15 @@ export default function Projects({ technologies, projects }) {
   function getMenuItems() {
     return technologies.map(technology => ({
       name: technology.alt,
-      href: `/projects?technology=${technology._id}`,
+      href: `/projects?technology=${technology.path}`,
     }));
   }
 
-  function checkProjectIsApplicable(project, tech_id) {
-    if (!tech_id) { // If no technology is selected, the project is applicable
+  function checkProjectIsApplicable(project, techPath) {
+    if (!techPath) { // If no technology is selected, the project is applicable
       return true;
     } else { // Otherwise check if the project's tech array contains the selected technology
-      return project.technologies.filter(tech => tech._id === tech_id).length > 0;
+      return project.technologies.filter(tech => tech.path === techPath).length > 0;
     }
   }
 
@@ -29,7 +29,7 @@ export default function Projects({ technologies, projects }) {
   useEffect(() => {
     // Set the selected technology once the router is ready and as long as something has changed:
     if (router.isReady && router.query.technology !== selectedTechnology) {
-      setSelectedTechnology(technologies.find(tech => tech._id === router.query.technology));
+      setSelectedTechnology(technologies.find(tech => tech.path === router.query.technology));
       setFilteredProjects(projects.filter(project => checkProjectIsApplicable(project, router.query.technology)));
     }
   }, [router])
