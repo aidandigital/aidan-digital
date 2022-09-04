@@ -17,7 +17,7 @@ function About({ pageData }) {
             </div>
           ))}
           <br />
-          <SubTitle>Fun questions:</SubTitle>
+          <SubTitle>Other FAQ:</SubTitle>
           <Answer>
             {pageData.sideContent.map((item, i) => (
               <details className="hover:cursor-pointer my-3" key={i}> 

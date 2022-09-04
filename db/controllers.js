@@ -25,38 +25,71 @@ export async function getTechnologies() {
   return doubleJson(technologies);
 }
 
-export async function getProjects(limit = false) {
-  const db = await database;
-  const projects = await db.collection("projects").aggregate([
-    { $sort: { complexity: -1 } },
-    { $limit: limit ? limit : 100 }, // if there's no limit, there will be a hard limit of 100
-    {
-        $lookup: {
-            from: "technologies",
-            localField: "technologies",
-            foreignField: "_id",
-            as: "technologies",
-        }
-    }
-  ]).toArray();
-  return doubleJson(projects);
-}
-
 export async function getProject(path) {
   const db = await database;
   const project = await db.collection("projects").aggregate([
     { $match: { path: path } },
     { $limit: 1 },
     {
+      $addFields: { // Add a field containing the original order of technologies
+        technologyIndexes: '$technologies'
+      }
+    },
+    {
+        $lookup: { // Doing $lookup does not maintain the original array order.
+            from: "technologies",
+            localField: "technologies",
+            foreignField: "path",
+            as: "unsortedTechnologies",
+        }
+    },
+    {
+      $project: { complexity: false } // remove complexity field from output
+    }
+  ]).toArray();
+
+  let parsedProject = doubleJson(project[0]);
+
+  parsedProject.technologies = parsedProject.technologyIndexes.map(path => {
+    return parsedProject.unsortedTechnologies.find(tech => tech.path === path);
+  });
+
+  return parsedProject;
+}
+
+export async function getProjects(limit = false) {
+  const db = await database;
+  const projects = await db.collection("projects").aggregate([
+    { $sort: { complexity: -1 } },
+    { $limit: limit ? limit : 100 }, // if there's no limit, there will be a hard limit of 100
+    {
+      $addFields: {
+        technologyIndexes: '$technologies'
+      }
+    },
+    {
         $lookup: {
             from: "technologies",
             localField: "technologies",
-            foreignField: "_id",
-            as: "technologies",
+            foreignField: "path",
+            as: "unsortedTechnologies",
         }
-    }
+    },
+    {
+      $project: { complexity: false } // remove complexity field from output
+    },
   ]).toArray();
-  return doubleJson(project[0]);
+
+  let parsedProjects = doubleJson(projects);
+  console.log(parsedProjects)
+
+  parsedProjects.forEach((project, i) => {
+    parsedProjects[i].technologies = project.technologyIndexes.map(path => {
+      return project.unsortedTechnologies.find(tech => tech.path === path);
+    })
+  });
+
+  return parsedProjects;
 }
 
 export async function getPage(name) {

@@ -25,6 +25,7 @@ function Home({ technologies, projects }) {
         <SubTitle id="tech">Technologies that I use</SubTitle>
         <p className="text-center mb-10">Click any icon below to view projects that implement it</p>
         <InfiniteCarousel images={technologies} externalImageLoader={externalImageLoader} />
+        <br />
       </Section>
       <Section background="gray-100">
         <SubTitle>Some of my Work</SubTitle>

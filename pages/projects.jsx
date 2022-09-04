@@ -26,17 +26,17 @@ function Projects({ technologies, projects }) {
 
   const router = useRouter();
 
+  const [menuItems, setMenuItems] = useState(getMenuItems());
+  const [filteredProjects, setFilteredProjects] = useState(projects);
+  const [selectedTechnology, setSelectedTechnology] = useState(null);
+
   useEffect(() => {
     // Set the selected technology once the router is ready and as long as something has changed:
-    if (router.isReady && router.query.technology !== selectedTechnology) {
+    if (router.isReady && router.query.tech !== selectedTechnology) {
       setSelectedTechnology(technologies.find(tech => tech.path === router.query.tech));
       setFilteredProjects(projects.filter(project => checkProjectIsApplicable(project, router.query.tech)));
     }
   }, [router])
-
-  const [menuItems, setMenuItems] = useState(getMenuItems());
-  const [filteredProjects, setFilteredProjects] = useState(projects);
-  const [selectedTechnology, setSelectedTechnology] = useState(null);
 
   function Opener() {
     return <span className="hover:cursor-pointer hover:opacity-80 duration-200 px-4 py-2 bg-secondarydark rounded-md">Filter by Technology</span>;
@@ -64,7 +64,7 @@ export default Projects;
 
 export async function getStaticProps() {
   const technologies = await getTechnologies();
-  const projects = await getProjects(3);
+  const projects = await getProjects();
 
   return {
     props: { technologies: technologies, projects: projects },
