@@ -16,7 +16,7 @@ My personal website that most importantly includes a portfolio with the ability 
 * Database read operations and aggregation.
 * Infinite image carousel component that makes use of a finite number of images.
 * Other cool decorative components such as the typewriter animation and posts feed.
-* 3 different forms that automatically consumer url parameters. Utilizes my custom form submission API (https://aidandigital.com/projects/form-submit).
+* 3 different forms that automatically consumer url parameters. Utilizes my custom form submission API (https://github.com/aidandigital/forms-api).
 * Basic SEO
 * Images and my logo are served via AWS CloudFront which is connected to an AWS S3 bucket.
 
