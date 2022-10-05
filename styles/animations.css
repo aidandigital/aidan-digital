@@ -49,3 +49,13 @@
     -ms-transition: all 300ms ease;
     transition: all 300ms ease;
 }
+
+/* Fade Away Animation */
+.fade-away {
+    animation: fade-away 1s 1s forwards;
+}
+
+@keyframes fade-away {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}

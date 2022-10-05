@@ -13,7 +13,7 @@ function Home({ technologies, projects }) {
     <>
       <div className="px-10 md:px-20 py-24 md:py-40">
         <div>
-          <h1 className="typewriter font-bold font-serif text-3xl md:text-5xl">
+          <h1 className="typewriter font-serif text-3xl md:text-5xl">
             <Typewriter>I'm Aidan, a student and full-stack developer. </Typewriter>
           </h1>
         </div>

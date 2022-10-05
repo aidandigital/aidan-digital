@@ -25,7 +25,10 @@ module.exports = {
       '3xl': '1.875rem',
       '4xl': '2.25rem',
       '5xl': '2.9rem',
-    }
+    },
+    boxShadow: {
+      DEFAULT: '0px 1px 10px 2px rgb(233, 233, 233)',
+    },
   },
   plugins: [],
 }

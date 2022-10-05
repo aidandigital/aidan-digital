@@ -4,8 +4,9 @@ import UnderlineLink from "../low-level/UnderlineLink";
 
 export default function Footer() {
   const menuItems = [
-    {name: "Report a Bug", href: "/report-bug", withRef: true, target: "_blank"},
-    {name: "Copyright info for References", href: "/references"},
+    {name: "Contact", href: "/contact", withRef: true},
+    {name: "LinkedIn® Profile", href: "https://www.linkedin.com/in/aidan-fullstack/"},
+    {name: "GitHub Profile", href: "https://github.com/aidandigital"}
   ];
 
   return (
@@ -13,7 +14,7 @@ export default function Footer() {
       <div className="p-5 mt-3 text-center">
         <Menu items={menuItems} fontSize="base" pipes={true} />
       </div>
-      <p className="text-center text-xs">&copy; {new Date().getFullYear()} Aidan Digital, excluding <UnderlineLink><Link href="/references">references</Link></UnderlineLink>. All rights reserved.</p>
+      <p className="text-center text-xs">&copy; {new Date().getFullYear()} Aidan Digital. All rights reserved. <UnderlineLink><Link href="/references">Copyright info for References</Link></UnderlineLink></p>
     </footer>
   );
 }

@@ -10,6 +10,10 @@ function DefaultLayout({ children, title, description }) {
         <meta name="robots" content="all" key="robots" />
         <meta name="description" content={description} key="desc" />
       </Head>
+      <div className="fixed w-full z-20">
+        <Header />
+      </div>
+      {/* Put in the header twice since the first one is fixed */}
       <Header />
       <main>{children}</main>
       <Footer />

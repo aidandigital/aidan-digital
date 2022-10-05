@@ -81,7 +81,6 @@ export async function getProjects(limit = false) {
   ]).toArray();
 
   let parsedProjects = doubleJson(projects);
-  console.log(parsedProjects)
 
   parsedProjects.forEach((project, i) => {
     parsedProjects[i].technologies = project.technologyIndexes.map(path => {

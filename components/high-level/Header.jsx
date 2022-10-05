@@ -22,12 +22,13 @@ function Header() {
   ];
 
   return (
-    <header className="bg-gray-100 px-3 py-1 md:px-5 md:py-1.5 flex items-center justify-between">
+    <header className="bg-gray-100 px-3 py-1 md:px-5 md:py-1.5 flex items-center justify-between shadow">
       <div className="flex items-center">
         <div className="inline-block">
           <Link href="/">
             <div tabIndex="1" onKeyDown={clickOnEnter} className="hover:cursor-pointer">
               <i className="icon-ad text-5xl" />
+              <div className="text-xs text-gray-600 ml-2" style={{letterSpacing: "2px"}}>Aidan Digital</div>
             </div>
           </Link>
         </div>
