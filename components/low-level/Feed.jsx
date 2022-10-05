@@ -29,7 +29,7 @@ const Feed = ({ items }) => {
             <div className="w-full z-10 inline-block hover:cursor-pointer hover:opacity-90 lg:hover:opacity-40 darken duration-200 rounded-lg overflow-hidden 2xl:px-10 my-3">
                 <Link href={"/projects/" + item.path}>
                     <div className="lg:hover:blur-sm duration-200">
-                        <img src={externalThumbnailUrl(item.thumbnail)} />
+                        <img src={externalThumbnailUrl(item.thumbnail)} alt="" />
                     </div>
                 </Link>
             </div>

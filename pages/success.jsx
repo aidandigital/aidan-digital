@@ -20,7 +20,7 @@ function Success() {
                 <br />
                 <ArrowLink><Link href="/">Back to Home</Link></ArrowLink>
             </div>
-            <Image src={sentSvg} height="400"></Image>
+            <Image src={sentSvg} height="400" alt="Drawing of a paper airplane flying away."></Image>
         </div>
     )
 };

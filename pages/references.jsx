@@ -11,14 +11,14 @@ function References() {
         <div className="text-center">
             <Section>
                 <Title>Trademark info for References</Title>
-                Throughout this website, other websites I own, and other means of marketing/communication/documentation, I reference external software products and services. For example, in the section "Technologies that I use" on this website, I display certain logos of products/services that I have used to develop/publish at least one of my projects. <strong>I am not endorsed, sponsored by, or affiliated with any of the external software products/services that I may reference.</strong> If I have mistakenly referred to a product/service in a way that infringes on it's copyright or trademark policy, please fill out the following form immediately to have it swiftly altered or removed:
+                Throughout this website, other websites I own, and other means of marketing/communication/documentation, I reference external software products and services. For example, in the section &quot;Technologies that I use&quot; on this website, I display certain logos of products/services that I have used to develop/publish at least one of my projects. <strong>I am not endorsed, sponsored by, or affiliated with any of the external software products/services that I may reference.</strong> If I have mistakenly referred to a product/service in a way that infringes on it&apos;s copyright or trademark policy, please fill out the following form immediately to have it swiftly altered or removed:
                 <div className="mt-8">
                     <Button>
                         <LinkWithRef href="/copyright-infringement">Report copyright infringement</LinkWithRef>
                     </Button>
                 </div>
                 <div className="mt-8">
-                    Attribution is a requirement detailed in some of my references' trademark policies. The table below lists all of the references I make that have this requirement. If I have mistakenly excluded a reference from this list that needs to be on it, please fill out the preceding form immediately to have it swiftly added:
+                    Attribution is a requirement detailed in some of my references&apos; trademark policies. The table below lists all of the references I make that have this requirement. If I have mistakenly excluded a reference from this list that needs to be on it, please fill out the preceding form immediately to have it swiftly added:
                 </div>
                 <table className="mt-10 w-full">
                     <tbody>
@@ -48,7 +48,7 @@ function References() {
                         <tr>
                             <td>Python</td>
                             <td>
-                                "Python" and the Python logos are trademarks or registered trademarks of the Python Software Foundation, used by this website with permission from the Foundation.
+                                &quot;Python&quot; and the Python logos are trademarks or registered trademarks of the Python Software Foundation, used by this website with permission from the Foundation.
                             </td>
                         </tr>
                     </tbody>

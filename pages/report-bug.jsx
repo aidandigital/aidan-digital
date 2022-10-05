@@ -59,10 +59,10 @@ class ReportBug extends Component {
                         : null}
                         <Submit data={this.state} path="/general-forms">Submit</Submit>
                     </div>
-                    <div class="mt-10 md:mt-0 block md:inline-block md:w-1/2 px-4 md:px-12 text-center">
+                    <div className="mt-10 md:mt-0 block md:inline-block md:w-1/2 px-4 md:px-12 text-center">
                         <div className="h-full bg-gray-100 py-6 md:py-0">
                             <div className="md:relative md:top-1/3">
-                                <div class="font-bold">Or email me directly at:</div>
+                                <div className="font-bold">Or email me directly at:</div>
                                 <br />
                                 <a href="mailto:contact@aidandigital.com">
                                     <ArrowLink>contact@aidandigital.com</ArrowLink>

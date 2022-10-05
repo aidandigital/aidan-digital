@@ -28,7 +28,7 @@ export default function Project({ project }) {
                         <Link href={project.webUrl}>
                             <div className="hover:cursor-pointer darken duration-200">
                                 {/* We must use the regular img element since we don't know the width of the image and we are getting the image from an external source */}
-                                <img src={externalThumbnailUrl(project.thumbnail)} />
+                                <img src={externalThumbnailUrl(project.thumbnail)} alt="Thumbnail of the project." />
                             </div>
                         </Link>
                     </div>
@@ -43,7 +43,7 @@ export default function Project({ project }) {
                         {project.githubUrls.map((item, i) => (
                             <Link href={item.hidden ? "/backend-hidden" : item.url} key={i}>
                                 <div className="w-fit m-auto mb-5 hover:cursor-pointer hover:opacity-70 duration-200">
-                                    <span className="mx-3 relative top-1"><Image loader={externalLogoLoader} src="github-2.svg" width="20" height="20" /></span>
+                                    <span className="mx-3 relative top-1"><Image loader={externalLogoLoader} src="github-2.svg" width="20" height="20" alt="" /></span>
                                     {item.name ? item.name : "GitHub Repo"}
                                 </div>
                             </Link>
@@ -56,7 +56,7 @@ export default function Project({ project }) {
                     <div className="md:flex align-start">
                         <div className="inline-block w-full md:w-1/2">
                             <SubTitle notBold={true}>Technologies used</SubTitle>
-                            <ul class="list-inside list-disc text-center">
+                            <ul className="list-inside list-disc text-center">
                                 {project.technologies.map((tech, i) => (
                                     <li key={i}>{tech.alt}</li>
                                 )) }
@@ -64,7 +64,7 @@ export default function Project({ project }) {
                         </div>
                         <div className="inline-block w-full md:w-1/2">
                             <SubTitle notBold={true}>Features</SubTitle>
-                            <ul class="list-inside list-disc text-center">
+                            <ul className="list-inside list-disc text-center">
                                 {project.features.map((feature, i) => (
                                     <li key={i}>{feature}</li>
                                 )) }

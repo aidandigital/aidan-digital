@@ -57,10 +57,10 @@ class Contact extends Component {
                         <ParagraphInput name="body" rows="5" value={this.state.body} onChange={this.setInput}></ParagraphInput>
                         <Submit data={this.state} path="/general-forms">Submit</Submit>
                     </div>
-                    <div class="mt-10 md:mt-0 block md:inline-block md:w-1/2 px-4 md:px-12 text-center">
+                    <div className="mt-10 md:mt-0 block md:inline-block md:w-1/2 px-4 md:px-12 text-center">
                         <div className="h-full bg-gray-100 py-6 md:py-0">
                             <div className="md:relative md:top-1/3">
-                                <div class="font-bold">Other options:</div>
+                                <div className="font-bold">Other options:</div>
                                 <br />
                                 <a href="mailto:contact@aidandigital.com" className="hover:cursor-pointer hover:opacity-70 duration-200">
                                     <EnvelopeIcon className="hidden h-5 md:inline-block mx-3" />
@@ -69,13 +69,13 @@ class Contact extends Component {
                                 <br />
                                 <br />
                                 <a href="https://www.linkedin.com/in/aidan-fullstack/" className="hover:cursor-pointer hover:opacity-70 duration-200">
-                                    <span className="mx-2.5 relative top-1"><Image loader={externalLogoLoader} src="linkedin.svg" width="25" height="25" /></span>
+                                    <span className="mx-2.5 relative top-1"><Image loader={externalLogoLoader} src="linkedin.svg" width="25" height="25" alt="" /></span>
                                     LinkedIn® Profile
                                 </a>
                                 <br />
                                 <br />
                                 <a href="https://github.com/aidandigital" className="hover:cursor-pointer hover:opacity-70 duration-200">
-                                    <span className="mx-3 relative top-1"><Image loader={externalLogoLoader} src="github-2.svg" width="20" height="20" /></span>
+                                    <span className="mx-3 relative top-1"><Image loader={externalLogoLoader} src="github-2.svg" width="20" height="20" alt="" /></span>
                                     Github Profile
                                 </a>
                             </div>
