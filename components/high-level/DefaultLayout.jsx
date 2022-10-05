@@ -9,6 +9,8 @@ function DefaultLayout({ children, title, description }) {
         <title>{title ? title + " |": ""} Aidan Digital</title>
         <meta name="robots" content="all" key="robots" />
         <meta name="description" content={description} key="desc" />
+        <link rel="icon" href="/favicon.png" />
+        <link rel="apple-touch-icon" href="/favicon.png" />
       </Head>
       <div className="fixed w-full z-20">
         <Header />
