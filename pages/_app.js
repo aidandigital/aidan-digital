@@ -1,7 +1,6 @@
 /* Global CSS */
-import '../styles/globals.css'
-import '../styles/gradient-logo.css'
-import '../styles/animations.css'
+import '../styles/globals.css';
+import '../styles/animations.css';
 
 import DefaultLayout from '../components/high-level/DefaultLayout'
 import AltLayout from '../components/high-level/AltLayout'

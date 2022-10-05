@@ -43,8 +43,8 @@ function Projects({ technologies, projects }) {
   }
 
   return (
-    <>
-      <Section background="gray-200" fullHeight={true}>
+    <div className="bg-gray-200">
+      <Section fullHeight={true}>
         <Title><span className="hover:cursor-pointer"><Link href="/projects">Projects</Link></span></Title>
         <div className="text-center pb-5">
           {!selectedTechnology ?
@@ -54,7 +54,7 @@ function Projects({ technologies, projects }) {
         </div>
         <Feed items={filteredProjects} />
       </Section>
-    </>
+    </div>
   );
 };
 

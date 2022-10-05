@@ -21,36 +21,38 @@ export default function Project({ project }) {
             <Head>
                 <title>{project.name} | Aidan Digital</title>
             </Head>
-            <Section background="gray-200">
-                <div className="md:flex items-center">
-                    <div className="inline-block w-full md:w-1/2">
-                        <span className="md:hidden"><Title>{project.name}</Title></span>
-                        <Link href={project.webUrl}>
-                            <div className="hover:cursor-pointer darken duration-200">
-                                {/* We must use the regular img element since we don't know the width of the image and we are getting the image from an external source */}
-                                <img src={externalThumbnailUrl(project.thumbnail)} alt="Thumbnail of the project." />
-                            </div>
-                        </Link>
-                    </div>
-                    <div className="my-3 inline-block w-full md:w-1/2 text-center px-10">
-                        <span className="hidden md:block"><Title>{project.name}</Title></span>
-                        <div className="w-fit m-auto mb-5 hover:cursor-pointer hover:opacity-70 duration-200">
-                            <a href={project.webUrl}>
-                                <span className="inline-block mx-2.5 relative top-1.5"><WebIcon /></span>
-                                Visit Website
-                            </a>
-                        </div>
-                        {project.githubUrls.map((item, i) => (
-                            <Link href={item.hidden ? "/backend-hidden" : item.url} key={i}>
-                                <div className="w-fit m-auto mb-5 hover:cursor-pointer hover:opacity-70 duration-200">
-                                    <span className="mx-3 relative top-1"><Image loader={externalLogoLoader} src="github-2.svg" width="20" height="20" alt="" /></span>
-                                    {item.name ? item.name : "GitHub Repo"}
+            <div className="bg-gray-200">
+                <Section>
+                    <div className="md:flex items-center">
+                        <div className="inline-block w-full md:w-1/2">
+                            <span className="md:hidden"><Title>{project.name}</Title></span>
+                            <Link href={project.webUrl}>
+                                <div className="hover:cursor-pointer darken duration-200">
+                                    {/* We must use the regular img element since we don't know the width of the image and we are getting the image from an external source */}
+                                    <img src={externalThumbnailUrl(project.thumbnail)} alt="Thumbnail of the project." />
                                 </div>
                             </Link>
-                        ))}
+                        </div>
+                        <div className="my-3 inline-block w-full md:w-1/2 text-center px-10">
+                            <span className="hidden md:block"><Title>{project.name}</Title></span>
+                            <div className="w-fit m-auto mb-5 hover:cursor-pointer hover:opacity-70 duration-200">
+                                <a href={project.webUrl}>
+                                    <span className="inline-block mx-2.5 relative top-1.5"><WebIcon /></span>
+                                    Visit Website
+                                </a>
+                            </div>
+                            {project.githubUrls.map((item, i) => (
+                                <Link href={item.hidden ? "/backend-hidden" : item.url} key={i}>
+                                    <div className="w-fit m-auto mb-5 hover:cursor-pointer hover:opacity-70 duration-200">
+                                        <span className="mx-3 relative top-1"><Image loader={externalLogoLoader} src="github-2.svg" width="20" height="20" alt="" /></span>
+                                        {item.name ? item.name : "GitHub Repo"}
+                                    </div>
+                                </Link>
+                            ))}
+                        </div>
                     </div>
-                </div>
-            </Section>
+                </Section>
+            </div>
             <Section>
                 <div className="text-left">
                     <div className="md:flex align-start">

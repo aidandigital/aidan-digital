@@ -1,6 +1,16 @@
 /* Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Rokkitt&family=Source+Sans+Pro&display=swap');
 
+/* Import AD Icon */
+@import url('https://cdn.aidandigital.com/ad-icon/css/fontello-embedded.css');
+
+/* Must be applied to ::before since that is how the font is applied to the <i> element by Fontello */
+.icon-ad::before {
+  background-image: linear-gradient(to bottom right, rgb(44, 89, 250), rgb(44, 195, 250));
+  color: transparent;
+  background-clip: text;
+}
+
 html,
 body {
   padding: 0;
