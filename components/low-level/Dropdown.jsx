@@ -31,8 +31,8 @@ const DropdownMenu = ({ opener, background, items, emphasizeLastItem }) => {
                         <div onClick={closeMenu}>X <span className="ml-1">Close</span></div>
                     </li>
                     {regularItems.map((item, i) => (
-                        <Link href={item.href}>
-                            <li onClick={closeMenu} key={i} className="block px-3 py-2 text-gray-600 hover:bg-white hover:cursor-pointer">
+                        <Link href={item.href} key={i}>
+                            <li onClick={closeMenu} className="block px-3 py-2 text-gray-600 hover:bg-white hover:cursor-pointer">
                                 {/* Close the menu when switching pages since NextJS does soft refreshes and the menu would still be open otherwise */}
                                 {item.name}
                             </li>
