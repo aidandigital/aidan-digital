@@ -7,7 +7,7 @@ const Menu = ({items, fontSize, pipes}) => {
     return (
         items.map((item, i) => (
             <li key={i} className="inline-block">
-                <span className={liClass + " px-1 md:px-8"}>
+                <span className={liClass + " px-1.5 md:px-8"}>
                     {item.withRef ?
                     <LinkWithRef href={item.href}><a target={item.target}>{item.name}</a></LinkWithRef>
                     :
