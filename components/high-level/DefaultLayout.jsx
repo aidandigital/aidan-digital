@@ -16,7 +16,9 @@ function DefaultLayout({ children, title, description }) {
         <Header />
       </div>
       {/* Put in the header twice since the first one is fixed */}
-      <Header />
+      <div className="opacity-0">
+        <Header />
+      </div>
       <main>{children}</main>
       <Footer />
     </>

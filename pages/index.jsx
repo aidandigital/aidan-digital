@@ -12,7 +12,8 @@ function Home({ technologies, projects }) {
   return (
     <>
       <div className="px-10 md:px-20 py-24 md:py-40">
-        <div>
+        <div className="h-36 lg:h-fit">
+          {/* ^ Make height fixed for smaller screens to prevent layout shifting when the text goes onto another line. */}
           <h1 className="typewriter font-serif text-3xl md:text-5xl">
             <Typewriter>I&apos;m Aidan, a student and full-stack developer. </Typewriter>
           </h1>
@@ -24,7 +25,7 @@ function Home({ technologies, projects }) {
       <Section>
         <SubTitle id="tech">Technologies that I use</SubTitle>
         <p className="text-center mb-10">Click any icon below to view projects that implement it</p>
-        <InfiniteCarousel images={technologies} externalImageLoader={externalImageLoader} />
+        <InfiniteCarousel images={technologies} externalImageLoader={externalImageLoader} transition="linear" />
         <br />
       </Section>
       <Section background="gray-100">
