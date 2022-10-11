@@ -1,3 +1,4 @@
+// WARNING: This component only works on Safari.
 // NOTE: If the carousel is jumping to every other item, it is because React is in StrictMode.
 // React StrictMode is disabled in production, so this component should work there.
 
@@ -17,7 +18,6 @@ class InfiniteCarousel extends Component {
             currentImages: props.images,
             speed: props.speed || 3500,
             transition: props.transition || "ease-in-out",
-            scrollX: 0,
             externalImageLoader: props.externalImageLoader,
         };
 
@@ -43,7 +43,7 @@ class InfiniteCarousel extends Component {
         setTimeout(() => this.changeImages(), this.state.speed);
     }
 
-    shiftImages() {
+    shiftImages() { // move images left by creating negative left margin
         if (this.marginMachine.current) { // ensure marginMachine is still defined so we don't throw an error (such as if a user switches pages)
             this.marginMachine.current.style.transition = this.state.speed + "ms " + this.state.transition;
             this.marginMachine.current.style.marginLeft = "-" + this.computeTotalImageWidth(this.state.currentImages[0], true) + "px"; // include margin since we need to move the entire image and the whitespace around it
@@ -52,10 +52,12 @@ class InfiniteCarousel extends Component {
 
     changeImages = () => {
         const imagesLength = this.state.currentImages.length;
+        // reset the margin machine:
         if (this.marginMachine.current) {
-            this.marginMachine.current.style.transition = "0s";
-            this.marginMachine.current.style.marginLeft = 0;
+            this.marginMachine.current.style.transition = "0ms " + this.state.transition;
+            this.marginMachine.current.style.marginLeft = "0px";
         }
+        // move first image to the back:
         this.setState({ currentImages: [...this.state.currentImages.slice(1, imagesLength), this.state.currentImages[0]] });
     }
 
@@ -63,7 +65,7 @@ class InfiniteCarousel extends Component {
         return this.defaultImageWidth - (imageObj.shrinkAspectBy ? imageObj.shrinkAspectBy : 0) + (includeMargin ? this.defaultMarginX * 2 : 0);
     }
 
-    restrictManualScroll(e) {
+    restrictManualScroll(e) { // prevent manual scrolling left/right
         if (e.deltaX !== 0) { // users can still scroll up/down
             e.preventDefault();
             e.stopPropagation();
@@ -74,7 +76,8 @@ class InfiniteCarousel extends Component {
 
     render() {
         return (
-            <div className="w-full overflow-x-scroll no-scrollbar h-60 duration-1000" ref={this.scrollBox}>
+            <div className="w-full overflow-x-scroll no-scrollbar h-60" ref={this.scrollBox}>
+                {/* ^ Removed duration-1000 from above, maybe that will help */}
                 <div className="w-max flex py-10 items-center">
                     <div className="inline-block" ref={this.marginMachine}></div>
                     {this.state.currentImages.map((image, i) => (

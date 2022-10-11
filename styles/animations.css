@@ -26,14 +26,36 @@
 
 /* Technology Logos Increase Size Animation */
 .pop:hover {
-    animation: pop .5s;
+    transform: scale(1.05);
     cursor: pointer;
+}
+
+.pop {
+    transition: transform 300ms;
 }
 
 @keyframes pop {
     0% { transform: scale(1); }
-    50% { transform: scale(1.1); }
-    100% { transform: scale(1); }
+    100% { transform: scale(1.05); }
+}
+
+/* Technology Logos Switching Animations */
+.image-down {
+    animation: fade-down 200ms;
+}
+
+@keyframes fade-down {
+    from { opacity: 1; transform: translateY(0px); }
+    to { opacity: 0; transform: translateY(20px); }
+}
+
+.image-up {
+    animation: fade-up 200ms;
+}
+
+@keyframes fade-up {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0px); }
 }
 
 /* Darken Image Animation */

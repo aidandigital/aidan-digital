@@ -3,7 +3,7 @@ import ArrowLink from '../components/low-level/ArrowLink'
 import Link from 'next/link'
 import SubTitle from '../components/low-level/SubTitle'
 import Typewriter from '../components/low-level/Typewriter'
-import InfiniteCarousel from '../components/low-level/InfiniteCarousel'
+import ImageSlider from '../components/low-level/ImageSlider'
 import Feed from '../components/low-level/Feed'
 import externalImageLoader from '../utils/externalLogoLoader'
 import { getTechnologies, getProjects } from '../db/controllers.js'
@@ -22,12 +22,14 @@ function Home({ technologies, projects }) {
           <Link href="/projects">See what I&apos;ve done</Link>
         </ArrowLink>
       </div>
+      {/*
       <Section>
         <SubTitle id="tech">Technologies that I use</SubTitle>
         <p className="text-center mb-10">Click any icon below to view projects that implement it</p>
-        <InfiniteCarousel images={technologies} externalImageLoader={externalImageLoader} transition="linear" />
+        <ImageSlider images={technologies} externalImageLoader={externalImageLoader} />
         <br />
       </Section>
+      */}
       <Section background="gray-100">
         <SubTitle>Some of my Work</SubTitle>
         <Feed items={projects} />

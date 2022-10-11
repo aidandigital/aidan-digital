@@ -16,7 +16,7 @@ function Header() {
 
   const menuItems = [
     {name: "About", href: "/about"},
-    {name: "Tech", href: "/#tech"},
+    /*{name: "Tech", href: "/#tech"},*/
     {name: "Projects", href: "/projects"},
     {name: "Contact", href: "/contact", withRef: true},
   ];
