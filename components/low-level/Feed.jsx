@@ -4,12 +4,12 @@ import externalThumbnailUrl from "../../utils/externalThumbnailUrl";
 const Feed = ({ items }) => {
     // Filter items wether they should be big or small on screen based on index:
     function getItems(arr, lookingForBig = true) {
-        const oneThird = Math.floor(arr.length / 3);
+        const split = Math.floor(arr.length / 2);
 
         if (lookingForBig) {
-            return arr.slice(0, oneThird);  
+            return arr.slice(0, split);  
         } else {
-            return arr.slice(oneThird);
+            return arr.slice(split);
         }
     };
 
