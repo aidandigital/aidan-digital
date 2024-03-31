@@ -68,13 +68,13 @@ class Contact extends Component {
                                 </a>
                                 <br />
                                 <br />
-                                <a href="https://www.linkedin.com/in/aidan-fullstack/" className="hover:cursor-pointer hover:opacity-70 duration-200">
+                                <a href="https://www.linkedin.com/in/aidanobryan/" className="hover:cursor-pointer hover:opacity-70 duration-200" target="_blank">
                                     <span className="mx-2.5 relative top-1"><Image loader={externalLogoLoader} src="linkedin.svg" width="25" height="25" alt="" /></span>
                                     LinkedIn® Profile
                                 </a>
                                 <br />
                                 <br />
-                                <a href="https://github.com/aidandigital" className="hover:cursor-pointer hover:opacity-70 duration-200">
+                                <a href="https://github.com/aidandigital" className="hover:cursor-pointer hover:opacity-70 duration-200" target="_blank">
                                     <span className="mx-3 relative top-1"><Image loader={externalLogoLoader} src="github-2.svg" width="20" height="20" alt="" /></span>
                                     Github Profile
                                 </a>
