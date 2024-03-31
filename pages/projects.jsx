@@ -48,8 +48,20 @@ function Projects({ technologies, projects }) {
         <Title><span className="hover:cursor-pointer"><Link href="/projects">Projects</Link></span></Title>
         <div className="text-center pb-5">
           {!selectedTechnology ?
-            <Dropdown opener={Opener} items={menuItems} />
-            : "Showing projects that implement: " + selectedTechnology.alt
+            (<Dropdown opener={Opener} items={menuItems} />)
+            : (
+              <>
+                <div className="pb-9">
+                  <span className="hover:cursor-pointer hover:opacity-80 duration-200 px-4 mx-1.5 py-2 bg-secondarydark rounded-md">
+                    <Link href="/projects">Show all Projects
+                  </Link></span>
+                  <span className="hidden sm:inline-block">
+                    <Dropdown opener={Opener} items={menuItems} />
+                  </span>
+                </div>
+                <p>Showing projects that implement: {selectedTechnology.alt}</p>
+              </>
+            )
           }
         </div>
         <Feed items={filteredProjects} />

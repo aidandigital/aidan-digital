@@ -9,9 +9,9 @@ const Menu = ({items, fontSize, pipes}) => {
             <li key={i} className="inline-block">
                 <span className={liClass + " px-1.5 md:px-8"}>
                     {item.withRef ?
-                    <LinkWithRef href={item.href}><a target={item.target}>{item.name}</a></LinkWithRef>
+                    <LinkWithRef href={item.href} rel={item.rel}><a target={item.target}>{item.name}</a></LinkWithRef>
                     :
-                    <Link href={item.href}><a target={item.target}>{item.name}</a></Link>
+                    <Link href={item.href} rel={item.rel}><a target={item.target}>{item.name}</a></Link>
                     }
                 </span>
                 {pipes && i < items.length - 1 ? <span className={liClass + " text-gray-300 md:text-black"}>|</span> : null}

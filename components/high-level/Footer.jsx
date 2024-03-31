@@ -5,14 +5,14 @@ import UnderlineLink from "../low-level/UnderlineLink";
 export default function Footer() {
   const menuItems = [
     {name: "Contact", href: "/contact", withRef: true},
-    {name: "LinkedIn® Profile", href: "https://www.linkedin.com/in/aidan-fullstack/"},
-    {name: "GitHub Profile", href: "https://github.com/aidandigital"}
+    {name: "LinkedIn® Profile", href: "https://www.linkedin.com/in/aidanobryan/", target: "_blank", rel: "noreferrer"}, /* The flag rel: "noreferrer" is a security requirement when using target: "_blank". */
+    {name: "GitHub Profile", href: "https://github.com/aidandigital", target: "_blank", rel: "noreferrer"}
   ];
 
   const mobileMenuItems = [
     {name: "Contact", href: "/contact", withRef: true},
-    {name: "LinkedIn®", href: "https://www.linkedin.com/in/aidan-fullstack/"},
-    {name: "GitHub", href: "https://github.com/aidandigital"}
+    {name: "LinkedIn®", href: "https://www.linkedin.com/in/aidanobryan/", target: "_blank", rel: "noreferrer"},
+    {name: "GitHub", href: "https://github.com/aidandigital", target: "_blank", rel: "noreferrer"}
   ];
 
   return (

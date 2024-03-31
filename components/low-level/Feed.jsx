@@ -16,7 +16,7 @@ const Feed = ({ items }) => {
     const Item = ({ item, isBig = true }) => (
         <div className="mt-5" style={{position: "relative"}} /* fix next/image layout=fill bug */>
             <div className={"w-full lg:text-center text-black lg:absolute " + (isBig ? "top-36" : "top-12")}>
-                <p className="mt-4 mx-4 font-bold text-xl lg:text-2xl">{item.feedName}</p>
+                <p className="mt-4 mx-4 font-bold text-xl lg:text-2xl">{item.shortenedName}</p>
                 <p className="mt-2 mb-4">Tech used: {item.technologies.slice(0, 3).map((tech, i) => (
                     <span key={i}>{tech.alt +
                         (
