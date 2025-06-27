@@ -28,14 +28,14 @@ const Submit = ({path, data, children, successMessageIndex, successDisplayEmail}
 
     function submit() {
         setLoading(true);
-        axios.post("https://formsubmit.aidandigital.com" + path, data).then(res => {
+        axios.post("https://forms-api.aidandigital.com" + path, data).then(res => {
             if (!res.data.success) {
                 setMessage(res.data.message);
             } else {
                 setSuccess(true);
             }
         }).catch(err => {
-            setMessage("An error occured, please try again later.");
+            setMessage("An error occurred, please try again later.");
         }).finally(() => {
             setLoading(false);
         });

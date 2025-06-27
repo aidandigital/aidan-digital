@@ -15,7 +15,7 @@ function Header() {
   );
 
   const menuItems = [
-    {name: "About", href: "/about"},
+    {name: "About", href: "https://www.linkedin.com/in/aidanobryan/", target: "_blank", rel: "noreferrer"},
     /*{name: "Tech", href: "/#tech"},*/
     {name: "Projects", href: "/projects"},
     {name: "Contact", href: "/contact", withRef: true},

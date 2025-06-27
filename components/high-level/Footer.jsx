@@ -4,13 +4,13 @@ import UnderlineLink from "../low-level/UnderlineLink";
 
 export default function Footer() {
   const menuItems = [
-    {name: "Contact", href: "/contact", withRef: true},
+    {name: "Report a Bug", href: "/report-bug", withRef: true, target: "_blank"},
     {name: "LinkedIn® Profile", href: "https://www.linkedin.com/in/aidanobryan/", target: "_blank", rel: "noreferrer"}, /* The flag rel: "noreferrer" is a security requirement when using target: "_blank". */
     {name: "GitHub Profile", href: "https://github.com/aidandigital", target: "_blank", rel: "noreferrer"}
   ];
 
   const mobileMenuItems = [
-    {name: "Contact", href: "/contact", withRef: true},
+    {name: "Report a Bug", href: "/report-bug", withRef: true, target: "_blank"},
     {name: "LinkedIn®", href: "https://www.linkedin.com/in/aidanobryan/", target: "_blank", rel: "noreferrer"},
     {name: "GitHub", href: "https://github.com/aidandigital", target: "_blank", rel: "noreferrer"}
   ];
@@ -23,7 +23,7 @@ export default function Footer() {
       <div className="md:hidden p-5 mt-3 text-center">
         <Menu items={mobileMenuItems} fontSize="base" pipes={true} />
       </div>
-      <p className="text-center text-xs">&copy; {new Date().getFullYear()} Aidan Digital. All rights reserved. <UnderlineLink><Link href="/references">Copyright info for References</Link></UnderlineLink></p>
+      <p className="text-center text-xs">&copy; {new Date().getFullYear()} Aidan Digital. All rights reserved. <UnderlineLink><Link href="/references">Copyright Info for References</Link></UnderlineLink></p>
     </footer>
   );
 }

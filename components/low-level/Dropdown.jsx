@@ -9,6 +9,7 @@ const DropdownMenu = ({ opener, background, items, emphasizeLastItem }) => {
     function closeMenu() {
         setOpen(false);
     }
+    
     function openMenu() {
         setOpen(true);
     }

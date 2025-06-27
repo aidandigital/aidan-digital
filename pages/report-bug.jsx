@@ -7,6 +7,8 @@ import ArrowLink from "../components/low-level/ArrowLink";
 import Submit from "../components/low-level/Submit";
 import Checkbox from "../components/low-level/Checkbox";
 import { useRouter } from "next/router";
+import externalLogoLoader from "../utils/externalLogoLoader";
+import Image from "next/image";
 
 class ReportBug extends Component {
     constructor(props) {
@@ -47,9 +49,9 @@ class ReportBug extends Component {
                 <div className="md:flex md:items-stretch">
                     <div className="block md:inline-block md:w-1/2 px-4">
                         <label>URL of the Issue</label>
-                        <TextInput placeholder="Copy the link of the issue and paste it here." name="url" value={this.state.url} onChange={this.setInput}></TextInput>
+                        <TextInput placeholder="Paste the URL of the issue here" name="url" value={this.state.url} onChange={this.setInput}></TextInput>
                         <label>Description*</label>
-                        <ParagraphInput placeholder="What happened?" name="body" rows="5" value={this.state.body} onChange={this.setInput}></ParagraphInput>
+                        <ParagraphInput placeholder="Please describe what's going on in as much detail as you can" name="body" rows="5" value={this.state.body} onChange={this.setInput}></ParagraphInput>
                         <Checkbox customStateSetter={this.setCheckboxInput} value={this.state.wantsEmailBack} label="I would like an email back." />
                         {this.state.wantsEmailBack ?
                         <>
@@ -62,10 +64,17 @@ class ReportBug extends Component {
                     <div className="mt-10 md:mt-0 block md:inline-block md:w-1/2 px-4 md:px-12 text-center">
                         <div className="h-full bg-gray-100 py-6 md:py-0">
                             <div className="md:relative md:top-1/3">
-                                <div className="font-bold">Or email me directly at:</div>
+                                <div className="font-bold">Other options:</div>
                                 <br />
-                                <a href="mailto:contact@aidandigital.com">
-                                    <ArrowLink>contact@aidandigital.com</ArrowLink>
+                                <a href="https://www.linkedin.com/in/aidanobryan/" className="hover:cursor-pointer hover:opacity-70 duration-200" target="_blank" rel="noreferrer">
+                                    <span className="mx-2.5 relative top-1"><Image loader={externalLogoLoader} src="linkedin.svg" width="25" height="25" alt="" /></span>
+                                    LinkedIn® Profile
+                                </a>
+                                <br />
+                                <br />
+                                <a href="https://github.com/aidandigital" className="hover:cursor-pointer hover:opacity-70 duration-200" target="_blank" rel="noreferrer">
+                                    <span className="mx-3 relative top-1"><Image loader={externalLogoLoader} src="github-2.svg" width="20" height="20" alt="" /></span>
+                                    Github Profile
                                 </a>
                             </div>
                         </div>

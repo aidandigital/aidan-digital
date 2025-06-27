@@ -62,12 +62,6 @@ class Contact extends Component {
                             <div className="md:relative md:top-1/3">
                                 <div className="font-bold">Other options:</div>
                                 <br />
-                                <a href="mailto:contact@aidandigital.com" className="hover:cursor-pointer hover:opacity-70 duration-200">
-                                    <EnvelopeIcon className="hidden h-5 md:inline-block mx-3" />
-                                    contact@aidandigital.com
-                                </a>
-                                <br />
-                                <br />
                                 <a href="https://www.linkedin.com/in/aidanobryan/" className="hover:cursor-pointer hover:opacity-70 duration-200" target="_blank" rel="noreferrer">
                                     <span className="mx-2.5 relative top-1"><Image loader={externalLogoLoader} src="linkedin.svg" width="25" height="25" alt="" /></span>
                                     LinkedIn® Profile

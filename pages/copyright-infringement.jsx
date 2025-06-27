@@ -53,7 +53,7 @@ class ReportCopyrightInfringement extends Component {
             <Section>
                 <Title color="black">Copyright Infringement Form</Title>
                 <div className="md:flex md:items-stretch">
-                    <div className="block md:inline-block md:w-1/2 px-4">
+                    <div className="block md:inline-block px-4">
                         <label>Name*</label>
                         <TextInput placeholder="Enter your full legal name." name="name" value={this.state.name} onChange={this.setInput}></TextInput>
                         <label>URL of Infringing Material*</label>
@@ -66,17 +66,6 @@ class ReportCopyrightInfringement extends Component {
                         Under penalty of perjury, I attest that the information in this form is accurate and that I am, or am authorized to act on behalf of, the owner of the rights being infringed by the material listed above.
                         <Checkbox customStateSetter={this.setCheckboxInput} value={this.state.agreement} label="Agree" />
                         <Submit data={this.state} path="/general-forms">Submit</Submit>
-                    </div>
-                    <div className="mt-10 md:mt-0 block md:inline-block md:w-1/2 px-4 md:px-12 text-center">
-                        <div className="h-full bg-gray-100 py-6 md:py-0">
-                            <div className="md:relative md:top-1/3">
-                                <div className="font-bold">Or email me directly at:</div>
-                                <br />
-                                <a href="mailto:contact@aidandigital.com">
-                                    <ArrowLink>contact@aidandigital.com</ArrowLink>
-                                </a>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </Section>
