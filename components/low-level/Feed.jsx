@@ -13,9 +13,9 @@ const Feed = ({ items }) => {
         }
     };
 
-    const Item = ({ item, isBig = true }) => (
+    const Item = ({ item }) => (
         <div className="mt-5" style={{position: "relative"}} /* fix next/image layout=fill bug */>
-            <div className={"w-full lg:text-center text-black lg:absolute " + (isBig ? "top-36" : "top-12")}>
+            <div className="inset-0 flex flex-col justify-center items-center lg:text-center text-black lg:absolute ">
                 <p className="mt-4 mx-4 font-bold text-xl lg:text-2xl">{item.shortenedName}</p>
                 <p className="mt-2 mb-4">Tech used: {item.technologies.slice(0, 3).map((tech, i) => (
                     <span key={i}>{tech.alt +
@@ -29,7 +29,7 @@ const Feed = ({ items }) => {
             <div className="w-full z-10 inline-block hover:cursor-pointer hover:opacity-90 lg:hover:opacity-40 darken duration-200 rounded-lg overflow-hidden 2xl:px-10 my-3">
                 <Link href={"/projects/" + item.path}>
                     <div className="lg:hover:blur-sm duration-200">
-                        <img src={externalThumbnailUrl(item.thumbnail)} alt="" />
+                        <img src={externalThumbnailUrl(item.thumbnail)} className="w-full" alt="Project image" />
                     </div>
                 </Link>
             </div>
@@ -47,7 +47,7 @@ const Feed = ({ items }) => {
                     </div>
                     <div className="w-full lg:w-1/3 block lg:inline-block">
                         {getItems(items, false).map((item, i) => (
-                            <Item item={item} key={i} isBig={false} />
+                            <Item item={item} key={i} />
                         ))}
                     </div>
                 </>
