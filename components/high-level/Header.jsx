@@ -5,6 +5,8 @@ import Menu from "../low-level/Menu";
 import clickOnEnter from "../../utils/clickOnEnter";
 import LinkWithRef from "../low-level/LinkWithRef";
 
+const LINKEDIN_PROFILE = process.env.NEXT_PUBLIC_LINKEDIN_PROFILE;
+
 function Header() {
   const menuOpener = () => (
     <div className="hover:cursor-pointer mr-2">
@@ -15,7 +17,7 @@ function Header() {
   );
 
   const menuItems = [
-    {name: "About", href: "https://www.linkedin.com/in/aidanobryan/", target: "_blank", rel: "noreferrer"},
+    {name: "About", href: LINKEDIN_PROFILE, target: "_blank", rel: "noreferrer"},
     /*{name: "Tech", href: "/#tech"},*/
     {name: "Projects", href: "/projects"},
     {name: "Contact", href: "/contact", withRef: true},

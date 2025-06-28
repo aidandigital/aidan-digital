@@ -3,6 +3,8 @@ import { useRouter } from "next/router";
 import TinyLoader from "./TinyLoader";
 import axios from "axios";
 
+const FORMS_API_URL = process.env.NEXT_PUBLIC_FORMS_API_URL;
+
 const Submit = ({path, data, children, successMessageIndex, successDisplayEmail}) => {
     const [message, setMessage] = useState(false);
     const [success, setSuccess] = useState(false);
@@ -28,7 +30,7 @@ const Submit = ({path, data, children, successMessageIndex, successDisplayEmail}
 
     function submit() {
         setLoading(true);
-        axios.post("https://forms-api.aidandigital.com" + path, data).then(res => {
+        axios.post(FORMS_API_URL + path, data).then(res => {
             if (!res.data.success) {
                 setMessage(res.data.message);
             } else {

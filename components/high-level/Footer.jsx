@@ -2,17 +2,20 @@ import Menu from "../low-level/Menu";
 import Link from "next/link";
 import UnderlineLink from "../low-level/UnderlineLink";
 
+const GITHUB_PROFILE = process.env.NEXT_PUBLIC_GITHUB_PROFILE
+const LINKEDIN_PROFILE = process.env.NEXT_PUBLIC_LINKEDIN_PROFILE;
+
 export default function Footer() {
   const menuItems = [
     {name: "Report a Bug", href: "/report-bug", withRef: true, target: "_blank"},
-    {name: "LinkedIn® Profile", href: "https://www.linkedin.com/in/aidanobryan/", target: "_blank", rel: "noreferrer"}, /* The flag rel: "noreferrer" is a security requirement when using target: "_blank". */
-    {name: "GitHub Profile", href: "https://github.com/aidandigital", target: "_blank", rel: "noreferrer"}
+    {name: "LinkedIn® Profile", href: LINKEDIN_PROFILE, target: "_blank", rel: "noreferrer"}, /* The flag rel: "noreferrer" is a security requirement when using target: "_blank". */
+    {name: "GitHub Profile", href: GITHUB_PROFILE, target: "_blank", rel: "noreferrer"}
   ];
 
   const mobileMenuItems = [
     {name: "Report a Bug", href: "/report-bug", withRef: true, target: "_blank"},
-    {name: "LinkedIn®", href: "https://www.linkedin.com/in/aidanobryan/", target: "_blank", rel: "noreferrer"},
-    {name: "GitHub", href: "https://github.com/aidandigital", target: "_blank", rel: "noreferrer"}
+    {name: "LinkedIn®", href: LINKEDIN_PROFILE, target: "_blank", rel: "noreferrer"},
+    {name: "GitHub", href: GITHUB_PROFILE, target: "_blank", rel: "noreferrer"}
   ];
 
   return (
