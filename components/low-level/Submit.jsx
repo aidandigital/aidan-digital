@@ -30,6 +30,8 @@ const Submit = ({path, data, children, successMessageIndex, successDisplayEmail}
 
     function submit() {
         setLoading(true);
+        setMessage(false);
+
         axios.post(FORMS_API_URL + path, data).then(res => {
             if (!res.data.success) {
                 setMessage(res.data.message);
