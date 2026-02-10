@@ -12,15 +12,17 @@ function Home({ technologies, projects }) {
   return (
     <>
       <div className="px-10 md:px-20 py-24 md:py-40">
-        <div className="h-36 lg:h-fit">
+        <div className="h-36 md:h-fit">
           {/* ^ Make height fixed for smaller screens to prevent layout shifting when the text goes onto another line. */}
           <h1 className="typewriter font-serif text-3xl md:text-5xl">
-            <Typewriter>I&apos;m Aidan, a physics student and software developer. </Typewriter>
+            <Typewriter>I&apos;m Aidan, welcome to my collection of web development projects. </Typewriter>
           </h1>
         </div>
-        <ArrowLink>
-          <Link href="/projects">See what I&apos;ve done</Link>
-        </ArrowLink>
+        <div className="py-10">
+            <ArrowLink>
+            <Link href="/projects">See what I&apos;ve done</Link>
+            </ArrowLink>
+        </div>
       </div>
       {/*
       <Section>
