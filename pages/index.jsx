@@ -43,7 +43,7 @@ function Home({ technologies, projects }) {
   );
 };
 
-Home.description = "I'm Aidan, a full stack website developer.";
+Home.description = "Welcome to my collection of web development projects.";
 export default Home;
 
 export async function getStaticProps() {

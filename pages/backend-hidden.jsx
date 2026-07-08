@@ -4,8 +4,6 @@ import Button from "../components/low-level/Button";
 import LinkWithParams from "../components/low-level/LinkWithParams";
 
 function BackendHidden() {
-  const bodyText = "I would like to request access to the backend of <app name>. I am a <title> and you can verify this by <example: visiting my LinkedIn profile>."
-
   return (
     <div className="text-center">
         <Section fullHeight={true}>
@@ -13,7 +11,7 @@ function BackendHidden() {
             For security reasons, this server side code is located in a private repo. If you are a developer or recruiter and wish to view this repository, please request so below:
             <div className="mt-8">
                 <Button>
-                    <LinkWithParams withRef={true} params={[{name: "body", value: bodyText}]} href="/contact">Request access</LinkWithParams>
+                    <LinkWithParams withRef={true} href="/contact">Request access</LinkWithParams>
                 </Button>
             </div>
         </Section>

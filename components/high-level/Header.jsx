@@ -5,7 +5,7 @@ import Menu from "../low-level/Menu";
 import clickOnEnter from "../../utils/clickOnEnter";
 import LinkWithRef from "../low-level/LinkWithRef";
 
-const LINKEDIN_PROFILE = process.env.NEXT_PUBLIC_LINKEDIN_PROFILE;
+const GITHUB_PROFILE = process.env.NEXT_PUBLIC_GITHUB_PROFILE
 
 function Header() {
   const menuOpener = () => (
@@ -17,9 +17,8 @@ function Header() {
   );
 
   const menuItems = [
-    {name: "About", href: LINKEDIN_PROFILE, target: "_blank", rel: "noreferrer"},
-    /*{name: "Tech", href: "/#tech"},*/
     {name: "Projects", href: "/projects"},
+    {name: "GitHub Profile", href: GITHUB_PROFILE, target: "_blank", rel: "noreferrer"},
     {name: "Contact", href: "/contact", withRef: true},
   ];
 

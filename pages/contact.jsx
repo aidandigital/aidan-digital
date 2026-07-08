@@ -10,7 +10,6 @@ import externalLogoLoader from "../utils/externalLogoLoader";
 import Image from "next/image";
 
 const GITHUB_PROFILE = process.env.NEXT_PUBLIC_GITHUB_PROFILE
-const LINKEDIN_PROFILE = process.env.NEXT_PUBLIC_LINKEDIN_PROFILE;
 
 class Contact extends Component {
     constructor(props) {
@@ -65,12 +64,6 @@ class Contact extends Component {
                             <div className="md:relative md:top-1/3">
                                 <div className="font-bold">Other options:</div>
                                 <br />
-                                <a href={LINKEDIN_PROFILE} className="hover:cursor-pointer hover:opacity-70 duration-200" target="_blank" rel="noreferrer">
-                                    <span className="mx-2.5 relative top-1"><Image loader={externalLogoLoader} src="linkedin.svg" width="25" height="25" alt="" /></span>
-                                    LinkedIn® Profile
-                                </a>
-                                <br />
-                                <br />
                                 <a href={GITHUB_PROFILE} className="hover:cursor-pointer hover:opacity-70 duration-200" target="_blank" rel="noreferrer">
                                     <span className="mx-3 relative top-1"><Image loader={externalLogoLoader} src="github-2.svg" width="20" height="20" alt="" /></span>
                                     Github Profile
@@ -93,5 +86,5 @@ function ContactFunctional() {
 }
 
 ContactFunctional.title = "Contact";
-ContactFunctional.description = "Reach out to me.";
+ContactFunctional.description = "Send a message to me.";
 export default ContactFunctional;

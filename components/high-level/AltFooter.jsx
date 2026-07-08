@@ -5,7 +5,7 @@ import UnderlineLink from "../low-level/UnderlineLink";
 function AltFooter() {
   const menuItems = [
     {name: "Home", href: "/"},
-    {name: "Report a Bug", href: "/report-bug", withRef: true, target: "_blank"},
+    {name: "Report a Bug", href: "/report-bug", withRef: true},
     {name: "Contact", href: "/contact", withRef: true}
   ];
 
