@@ -1,7 +1,7 @@
 import Section from "../components/high-level/Section";
 import Title from "../components/low-level/Title";
 import Button from "../components/low-level/Button";
-import LinkWithParams from "../components/low-level/LinkWithParams";
+import LinkWithRef from "../components/low-level/LinkWithRef";
 
 function BackendHidden() {
   return (
@@ -11,7 +11,7 @@ function BackendHidden() {
             For security reasons, this server side code is located in a private repo. If you are a developer or recruiter and wish to view this repository, please request so below:
             <div className="mt-8">
                 <Button>
-                    <LinkWithParams withRef={true} href="/contact">Request access</LinkWithParams>
+                    <LinkWithRef href="/contact">Request access</LinkWithRef>
                 </Button>
             </div>
         </Section>
